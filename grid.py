@@ -11,3 +11,12 @@ arc_field=Plane(
                 ),
     ],
 )
+# Test arc grid dummy
+test_grid=[[1, 2, 3],
+            [4, 5, 6]]
+# build psi
+psi= arc_field.compose(test_grid)
+# to read back
+print("shape:", psi.grid)
+print("number of cells:", psi.n)
+print("colour at row 1, col 2:", psi.cell((1, 2)).properties["colour"])
